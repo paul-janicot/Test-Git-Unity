@@ -7,17 +7,17 @@ public class Collision : MonoBehaviour
 
 {
     public List<GameObject> hearts = new List<GameObject>();
-    public int life = 6;
+    public int life = 5;
     // Start is called before the first frame update
     void Start()
     {
-
+        UpdateLife();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     public void UpdateLife()
     {
@@ -35,4 +35,17 @@ public class Collision : MonoBehaviour
             //pipou
         }
     }
+    void lifeloss(int perte)
+    {
+        life -= perte;
+        UpdateLife();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Attack2"))
+        {
+            lifeloss(1);
+        }
+    }
+
 }

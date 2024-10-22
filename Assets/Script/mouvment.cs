@@ -33,7 +33,7 @@ public class mouvment : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
         {
             sprite.flipX = true;
-            attackzone.GetComponent<Collider2D>().offset = new Vector3(-2.5f, 0, 0);
+            attackzone.GetComponent<Collider2D>().offset = new Vector3(-1.6f, 0, 0);
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.Space))
