@@ -12,6 +12,7 @@ public class mouvment : MonoBehaviour
     SpriteRenderer sprite;
     public GameObject attackzone;
     private bool facingRight = true;
+    
     // Start is called before the first frame update
     void Start()
     {
