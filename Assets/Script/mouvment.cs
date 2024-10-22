@@ -11,6 +11,7 @@ public class mouvment : MonoBehaviour
     Animator animator;
     SpriteRenderer sprite;
     public GameObject attackzone;
+    private bool facingRight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +27,26 @@ public class mouvment : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D))
         {
-            sprite.flipX = false;
+            if (!facingRight)
+            {
+                transform.Rotate(0, 180f, 0);
+                facingRight = true ;
+            }
+                
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
-            attackzone.GetComponent<Collider2D>().offset = new Vector3(0, 0, 0);
+            //attackzone.GetComponent<Collider2D>().offset = new Vector3(0, 0, 0);
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            sprite.flipX = true;
-            attackzone.GetComponent<Collider2D>().offset = new Vector3(-1.6f, 0, 0);
+            
+            if(facingRight) 
+            {
+
+                transform.Rotate(0, 180f, 0);
+                facingRight = false;
+            }
+             
+            //attackzone.GetComponent<Collider2D>().offset = new Vector3(-1.6f, 0, 0);
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKeyDown(KeyCode.Space))
