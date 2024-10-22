@@ -78,8 +78,10 @@ GameObject:
   - component: {fileID: 5340087680351093262}
   - component: {fileID: 5423468199440212094}
   - component: {fileID: 2460886863042847208}
-  - component: {fileID: 2525375639065443020}
   - component: {fileID: 1640791661386348291}
+  - component: {fileID: 654865351098125959}
+  - component: {fileID: 2882156910906428714}
+  - component: {fileID: 1210533783350236391}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -182,8 +184,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &2525375639065443020
-CircleCollider2D:
+--- !u!114 &1640791661386348291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961713085357995412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb8da6b385ef574ea88877e1de957ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  jumpforce: 8
+  attackzone: {fileID: 0}
+--- !u!95 &654865351098125959
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961713085357995412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9adea13832714345b2b1ab5d8b744a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &2882156910906428714
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -214,10 +252,10 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &1640791661386348291
+  m_Offset: {x: -0.80823135, y: 0}
+  m_Size: {x: 11.084797, y: 35.08951}
+  m_Direction: 0
+--- !u!114 &1210533783350236391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,8 +264,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7961713085357995412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bb8da6b385ef574ea88877e1de957ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a3e9e74fcf1e114a8d78a8386338773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpforce: 8
+  hearts: []
+  life: 6
