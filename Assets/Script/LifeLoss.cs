@@ -37,7 +37,7 @@ public class Lifeloss : MonoBehaviour
         {
             if (player2)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
            
             else if (!player2)
