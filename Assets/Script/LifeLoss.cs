@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Collision : MonoBehaviour
+public class Lifeloss : MonoBehaviour
 
 {
     public List<GameObject> hearts = new List<GameObject>();
@@ -35,7 +35,7 @@ public class Collision : MonoBehaviour
             //pipou
         }
     }
-    void lifeloss(int perte)
+    public void lifeloss(int perte)
     {
         life -= perte;
         UpdateLife();
