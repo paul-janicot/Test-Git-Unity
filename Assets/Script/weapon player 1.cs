@@ -6,12 +6,13 @@ public class weapon : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bullet;
+    Animator animator;
 
     public KeyCode fireKey;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class weapon : MonoBehaviour
     {
         if (Input.GetKeyDown(fireKey))
         {
+            animator.SetTrigger("Shoot");
             Shoot();
         }
     }

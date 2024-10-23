@@ -59,7 +59,7 @@ public class mouvment : MonoBehaviour
             if (rigidbody.velocity.y < 0.001 && rigidbody.velocity.y > -0.001   )
              rigidbody.velocity += new Vector2(0, jumpforce);
         }
-        if (Input.GetKey(AttackKey))
+        if (Input.GetKeyDown(AttackKey))
         {
             animator.SetTrigger("Attack");
         }

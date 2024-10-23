@@ -8,10 +8,13 @@ public class Lifeloss : MonoBehaviour
 {
     public List<GameObject> hearts = new List<GameObject>();
     public int life = 5;
+    public bool player2;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         UpdateLife();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,20 +35,41 @@ public class Lifeloss : MonoBehaviour
         }
         if (life <= 0)
         {
-            //pipou
+            if (player2)
+            {
+                SceneManager.LoadScene(1);
+            }
+           
+            else if (!player2)
+            {
+                //scene2
+            }
+
         }
     }
     public void lifeloss(int perte)
     {
         life -= perte;
+        animator.SetTrigger("Hit");
         UpdateLife();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack2"))
+        if (player2)
         {
-            lifeloss(1);
+            if (collision.gameObject.CompareTag("Attack1"))
+            {
+                lifeloss(1);
+            }
         }
+        else if (!player2)
+        {
+            if (collision.gameObject.CompareTag("Attack2"))
+            {
+                lifeloss(1);
+            }
+        }
+       
     }
 
 }
