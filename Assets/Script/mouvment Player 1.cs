@@ -11,8 +11,12 @@ public class mouvment : MonoBehaviour
     Animator animator;
     SpriteRenderer sprite;
     public GameObject attackzone;
-    private bool facingRight = true;
-    
+    public bool facingRight = true;
+
+    public KeyCode moveRightKey;
+    public KeyCode moveLeftKey;
+    public KeyCode JumpKey;
+    public KeyCode AttackKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,7 @@ public class mouvment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(moveRightKey))
         {
             if (!facingRight)
             {
@@ -37,7 +41,7 @@ public class mouvment : MonoBehaviour
             transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
             //attackzone.GetComponent<Collider2D>().offset = new Vector3(0, 0, 0);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(moveLeftKey))
         {
             
             if(facingRight) 
@@ -50,12 +54,12 @@ public class mouvment : MonoBehaviour
             //attackzone.GetComponent<Collider2D>().offset = new Vector3(-1.6f, 0, 0);
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(JumpKey))
         {
             if (rigidbody.velocity.y < 0.001 && rigidbody.velocity.y > -0.001   )
              rigidbody.velocity += new Vector2(0, jumpforce);
         }
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(AttackKey))
         {
             animator.SetTrigger("Attack");
         }

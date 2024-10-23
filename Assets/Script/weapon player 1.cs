@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class weapon : MonoBehaviour
 {
-    public Transform firepoint; 
+    public Transform firepoint;
+
+    public KeyCode fireKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,13 @@ public class weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(fireKey))
+        {
+            Shoot();
+        }
+    }
+    private void Shoot()
+    {
+        //shoot
     }
 }

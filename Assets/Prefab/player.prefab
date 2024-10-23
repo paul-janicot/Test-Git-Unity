@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 654865351098125959}
   - component: {fileID: 2882156910906428714}
   - component: {fileID: 1210533783350236391}
+  - component: {fileID: 7814870778415290467}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -301,3 +302,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hearts: []
   life: 6
+--- !u!114 &7814870778415290467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961713085357995412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786e7349fff05174688ed6f175762582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepoint: {fileID: 5816422174116974933}
