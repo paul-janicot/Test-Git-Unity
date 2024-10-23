@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpforce: 8
+  jumpforce: 9
   attackzone: {fileID: 0}
   facingRight: 1
   moveRightKey: 0
