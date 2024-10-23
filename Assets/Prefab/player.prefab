@@ -232,6 +232,11 @@ MonoBehaviour:
   speed: 6
   jumpforce: 8
   attackzone: {fileID: 0}
+  facingRight: 1
+  moveRightKey: 0
+  moveLeftKey: 0
+  JumpKey: 0
+  AttackKey: 0
 --- !u!95 &654865351098125959
 Animator:
   serializedVersion: 5
@@ -315,3 +320,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 5816422174116974933}
+  bullet: {fileID: 5386740799965913903, guid: 1c04ab8854d17bd449bae3a7450f5e88, type: 3}
+  fireKey: 0

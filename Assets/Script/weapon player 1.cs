@@ -5,6 +5,7 @@ using UnityEngine;
 public class weapon : MonoBehaviour
 {
     public Transform firepoint;
+    public GameObject bullet;
 
     public KeyCode fireKey;
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class weapon : MonoBehaviour
     }
     private void Shoot()
     {
-        //shoot
+        Debug.Log("coucou");
+        Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 }
