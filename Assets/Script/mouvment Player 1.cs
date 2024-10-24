@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
+//using TreeEditor;
 using UnityEngine;
 
 public class mouvment : MonoBehaviour
 {
     public float speed = 5.0f;
     public float jumpforce = 2;
-    Rigidbody2D rigidbody;
+    Rigidbody2D rb;
     Animator animator;
     SpriteRenderer sprite;
     public GameObject attackzone;
@@ -20,7 +20,7 @@ public class mouvment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         
@@ -56,8 +56,8 @@ public class mouvment : MonoBehaviour
         }
         if (Input.GetKeyDown(JumpKey))
         {
-            if (rigidbody.velocity.y < 0.001 && rigidbody.velocity.y > -0.001   )
-             rigidbody.velocity += new Vector2(0, jumpforce);
+            if (rb.velocity.y < 0.001 && rb.velocity.y > -0.001   )
+             rb.velocity += new Vector2(0, jumpforce);
         }
         if (Input.GetKeyDown(AttackKey))
         {
