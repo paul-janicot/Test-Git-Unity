@@ -42,7 +42,7 @@ public class Lifeloss : MonoBehaviour
            
             else if (!player2)
             {
-                //scene2
+                SceneManager.LoadScene(3);
             }
 
         }
